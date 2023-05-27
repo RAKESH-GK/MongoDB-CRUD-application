@@ -1,0 +1,35 @@
+<!-- include header start -->
+<%- include('include/header')%>
+<!-- include header end -->
+ <!-- main start -->
+ <main id="main">
+    <a href="/add_user" class="new_user">+ New User <span><i class="fa fa-user"></i></span></a>
+    <!-- table start -->
+    <center>
+        <table cellspacing="0">
+            <tr class="table_head">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            <% for(var i=0;i<users.length;i++){%>
+            <tr>
+                <td><%= i+1 %></td>
+                <td><%= users[i].name %></td>
+                <td><%= users[i].email %></td>
+                <td><%= users[i].gender %></td>
+                <td><%= users[i].status %></td>
+                <td><a href="/update_user?id=<%= users[i]._id %>"><i class="fa fa-edit"></i></a> <a href="/" class="delete" data-id=<%= users[i]._id %>><i class="fa fa-close"></i></a></td>
+            </tr>
+            <% } %>
+        </table>
+    </center>
+    <!-- table end -->
+</main>
+<!-- main end -->
+<!-- include footer start -->
+<%- include('include/footer')%>
+<!-- include footer end -->

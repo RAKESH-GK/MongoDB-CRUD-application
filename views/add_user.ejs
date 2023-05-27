@@ -1,0 +1,27 @@
+<!-- include header start -->
+<%- include('include/header')%>
+<!-- include header end -->
+<main class="add_user" id="add_user">
+    <a href="/" class="buttons"><span><i class="fas fa-angle-double-left"></i></span> View All User</a>
+        
+    <form action="/api/users" method="post">
+        <div class="container">
+            <h2>Add users</h2>
+            <label for="">Name</label><br>
+            <input type="text" name="name" value="" placeholder="Enter name" class="textbox" autocomplete="none" required><br>
+            <label for="">Email</label><br>
+            <input type="text" name="email" value="" placeholder="Enter email address" class="textbox"autocomplete="none"required><br>
+            <label for="">Gender</label><br>
+            <input type="radio" name="gender" value="Male" required><span>Male</span>
+            <input type="radio" name="gender" value="Female"required><span>Female</span><br>
+            <label for="">Status</label><br>
+            <input type="radio" name="status" value="Active"required><span>Active</span>
+            <input type="radio" name="status" value="Inactive"required><span>Inactive</span><br>
+            <input type="submit" value="Save" class="save">
+        </div>
+    </form>
+</main>
+
+<!-- include footer start -->
+<%- include('include/footer')%>
+<!-- include footer end -->

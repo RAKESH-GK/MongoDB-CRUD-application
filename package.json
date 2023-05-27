@@ -1,0 +1,26 @@
+{
+  "name": "crud_apllication",
+  "version": "1.0.0",
+  "description": "crud with express and mongoo db",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "crud",
+    "mongodb"
+  ],
+  "author": "rakesh g k",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  }
+}

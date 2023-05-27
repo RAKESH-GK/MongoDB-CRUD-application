@@ -1,0 +1,28 @@
+<!-- include header start -->
+<%- include('include/header')%>
+<!-- include header end -->
+<main class="add_user">
+    <a href="/" class="buttons"><span><i class="fas fa-angle-double-left"></i></span> View All User</a>
+        
+    <form method="post" id="update_user">
+        <div class="container">
+            <h2>Update users</h2>
+            <label for="">Name</label><br>
+            <input type="text" name="id" value="<%= user._id%>" hidden><br>
+            <input type="text" name="name" value="<%= user.name%>" placeholder="Enter name" class="textbox"><br>
+            <label for="">Email</label><br>
+            <input type="text" name="email" value="<%= user.email%>" placeholder="Enter email address" class="textbox"><br>
+            <label for="">Gender</label><br>
+            <input type="radio" name="gender" value="Male" <%= user.gender == 'Male'?'checked':'' %>><span>Male</span>
+            <input type="radio" name="gender" value="Female" <%= user.gender == 'Female'?'checked':'' %>><span>Female</span><br>
+            <label for="">Status</label><br>
+            <input type="radio" name="status" value="Active" <%= user.status == 'Active'?'checked':'' %>><span>Active</span>
+            <input type="radio" name="status" value="Inactive" <%= user.status == 'Inactive'?'checked':'' %>><span>Inactive</span><br>
+            <input type="submit" value="Update" class="save">
+        </div>
+    </form>
+</main>
+
+<!-- include footer start -->
+<%- include('include/footer')%>
+<!-- include footer end -->
